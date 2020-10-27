@@ -57,7 +57,8 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
-    'linebreak-style': ['error', 'unix'],
+    // 'linebreak-style': ['error', 'unix'],
+    'linebreak-style': 0,
     'max-depth': ['error', 5],
     'max-len': [
       'error',

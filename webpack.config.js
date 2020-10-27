@@ -49,7 +49,7 @@ module.exports = {
   plugins: [
     new Dotenv({
       // path: `./.env.${process.env.NODE_ENV}`
-      path: path.resolve(__dirname, `./.env.${process.env.NODE_ENV}`)
+      path: path.resolve(__dirname, `.env.${process.env.NODE_ENV}`)
     }),
     new ForkTsCheckerWebpackPlugin({
       workers: 4,

@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "serve": "NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js",
+    "serve:win": "cross-env NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js",
     "test": "jest --coverage --watchAll --config=jest.config.js",
     "lint": "eslint . --ext .ts",
-    "build": "rm -rf ./dist && NODE_ENV=prod webpack --config webpack.config.prod.js"
+    "build": "rm -rf ./dist && NODE_ENV=prod webpack --config webpack.config.prod.js",
+    "build:win": "rmdir /S /Q dist && cross-env NODE_ENV=prod webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "jiazhenghao <jiazhenghao0203@hotmail.com> (https://github.com/jiazhenghao)",
@@ -22,6 +24,7 @@
     "@typescript-eslint/parser": "4.5.0",
     "compression-webpack-plugin": "6.0.4",
     "copy-webpack-plugin": "6.2.1",
+    "cross-env": "^7.0.2",
     "css-loader": "5.0.0",
     "dotenv-webpack": "4.0.0",
     "eslint": "7.12.0",
