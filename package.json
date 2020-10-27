@@ -7,7 +7,7 @@
     "serve": "NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js",
     "serve:win": "cross-env NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js",
     "test": "jest --coverage --watchAll --config=jest.config.js",
-    "lint": "eslint . --ext .ts",
+    "lint": "cross-env NODE_ENV=serve eslint . --ext .ts",
     "build": "rm -rf ./dist && NODE_ENV=prod webpack --config webpack.config.prod.js",
     "build:win": "rmdir /S /Q dist && cross-env NODE_ENV=prod webpack --config webpack.config.prod.js"
   },
