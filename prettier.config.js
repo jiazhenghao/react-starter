@@ -8,5 +8,4 @@ module.exports = {
   jsxBracketSameLine: false, // JSX标签闭合位置 默认false
   arrowParens: 'avoid', // 箭头函数参数括号，默认avoid 可选 avoid| always,avoid 能省略括号的时候就省略 例如x => x，always 总是有括号
   htmlWhitespaceSensitivity: 'strict' //html空格严格程度，可选<css|strict|ignore>
-  // printWidth: 120
 }

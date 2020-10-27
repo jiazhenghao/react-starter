@@ -7,9 +7,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json', '.css'],
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@checkin': path.resolve(__dirname, './src/sites/checkin'),
-      '@obd': path.resolve(__dirname, './src/sites/onboarding')
+      '@': path.resolve(__dirname, './src')
     }
   },
   module: {
@@ -38,17 +36,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.(svg)$/,
-        loader: 'react-svg-loader',
-        include: [
-          path.resolve(__dirname, './src/assets/icons'),
-          path.resolve(
-            __dirname,
-            './src/sites/onboarding/views/components/HsEditor/icons'
-          )
-        ]
-      },
-      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
         options: {
@@ -56,17 +43,6 @@ module.exports = {
           outputPath: 'css/',
           publicPath: url => '../css/' + url
         }
-      },
-      {
-        test: /\.(jpg|jpeg|png|svg)$/,
-        loader: 'url-loader?limit=100000',
-        exclude: [
-          path.resolve(__dirname, './src/assets/icons'),
-          path.resolve(
-            __dirname,
-            './src/sites/onboarding/views/components/HsEditor/icons'
-          )
-        ]
       }
     ]
   },
