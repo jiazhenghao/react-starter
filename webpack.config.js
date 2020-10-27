@@ -5,7 +5,7 @@ const Dotenv = require('dotenv-webpack')
 module.exports = {
   devtool: 'source-map',
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.json', '.css'],
+    extensions: ['.tsx', '.ts', '.js', 'jsx', '.json', '.css'],
     alias: {
       '@': path.resolve(__dirname, './src')
     }
@@ -48,7 +48,8 @@ module.exports = {
   },
   plugins: [
     new Dotenv({
-      path: `./.env.${process.env.NODE_ENV}`
+      // path: `./.env.${process.env.NODE_ENV}`
+      path: path.resolve(__dirname, `./.env.${process.env.NODE_ENV}`)
     }),
     new ForkTsCheckerWebpackPlugin({
       workers: 4,

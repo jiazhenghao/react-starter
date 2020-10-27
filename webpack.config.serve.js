@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-const webpackConfig = require('./webpack.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpackConfig = require('./webpack.config')
 
 const port = process.env.PORT || 8001
 
@@ -11,16 +11,18 @@ module.exports = {
   watch: true,
   entry: {
     hot: 'webpack/hot/dev-server',
-    checkin: __dirname + '/src/index.tsx'
+    // checkin: __dirname + '/src/index.tsx'
+    checkin: path.join(__dirname, '/src/index.tsx')
   },
   output: {
-    path: __dirname + '/dist',
+    // path: __dirname + '/dist',
+    path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
   devServer: {
     contentBase: path.join(__dirname, '/public'), // index.html的位置
-    port: port,
+    port,
     hot: true,
     historyApiFallback: true,
     headers: {

@@ -1,8 +1,17 @@
 module.exports = {
+  settings: {
+    'import/resolver': {
+      node: {},
+      webpack: {
+        config: 'webpack.config.js'
+      }
+    }
+  },
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
+    'jest/globals': true
   },
   extends: ['plugin:react/recommended', 'airbnb'],
   parser: '@typescript-eslint/parser',
@@ -13,9 +22,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'jest'],
   rules: {
-    semi: 'never',
+    semi: 0,
+    'import/prefer-default-export': 'off',
     'comma-dangle': ['error', 'never'],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -74,7 +84,14 @@ module.exports = {
     'no-undef': 'error',
     'no-var': 'error',
     'prefer-arrow-callback': 'error',
+    'arrow-parens': 0,
+    'prefer-template': 0,
+    'no-use-before-define': 0,
     'prefer-const': 'error',
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', 'ts', 'tsx'] }
+    ],
     'space-before-function-paren': ['error', 'never'],
     'spaced-comment': [
       'error',
