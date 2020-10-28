@@ -29,26 +29,22 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              localsConvention: 'camelCaseOnly',
               importLoaders: 1
             }
           }
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(bmp|gif|jpg|jpeg|png|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[hash].[ext]',
-          outputPath: 'css/',
-          publicPath: url => '../css/' + url
+          name: '[path][name].[ext]?[hash:8]'
         }
       }
     ]
   },
   plugins: [
     new Dotenv({
-      // path: `./.env.${process.env.NODE_ENV}`
       path: path.resolve(__dirname, `.env.${process.env.NODE_ENV}`)
     }),
     new ForkTsCheckerWebpackPlugin({
