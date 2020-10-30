@@ -5,17 +5,19 @@ const webpackConfig = require('./webpack.config')
 
 const port = process.env.PORT || 8001
 
+// for dev environment, use inline-source-map instead to better debug
+const myDevConfig = webpackConfig
+myDevConfig.devtool = 'inline-source-map'
+
 module.exports = {
-  ...webpackConfig,
+  ...myDevConfig,
   mode: 'development',
   watch: true,
   entry: {
     hot: 'webpack/hot/dev-server',
-    // checkin: __dirname + '/src/index.tsx'
     checkin: path.join(__dirname, '/src/index.tsx')
   },
   output: {
-    // path: __dirname + '/dist',
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
     publicPath: '/'

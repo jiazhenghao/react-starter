@@ -18,7 +18,8 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "importsNotUsedAsValues": "preserve" // ts-loader and ForkTsCheckerWebpackPlugin
   },
   "include": ["src/**/*", "tests/**/*.ts"],
   "exclude": ["node_modules"],
