@@ -53,11 +53,11 @@ module.exports = {
     'dot-notation': 'error',
     eqeqeq: ['error', 'always'],
     'func-names': 'off',
+    'import/newline-after-import': 0,
     indent: ['error', 2, { SwitchCase: 1 }],
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
-    // 'linebreak-style': ['error', 'unix'],
     'linebreak-style': 0,
     'max-depth': ['error', 5],
     'max-len': [

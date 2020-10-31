@@ -10,7 +10,7 @@ module.exports = {
   mode: 'production',
   watch: false,
   entry: {
-    main: path.join(__dirname, '/src/index.tsx')
+    main: path.join(__dirname, '/src/client/index.tsx')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
