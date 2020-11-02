@@ -1,0 +1,27 @@
+GET http://localhost:8002/demos
+
+###
+
+GET http://localhost:8002/demos/5f9ffd73a8c2738e398342b6
+
+###
+
+POST http://localhost:8002/demos
+Content-Type: application/json
+
+{
+    "name": "zhenghao jia2",
+    "subscribedToChannel": "demo channel 2"
+} 
+
+###
+DELETE http://localhost:8002/demos/5f9ffce82963ee8dc7985b17
+
+###
+
+PATCH http://localhost:8002/demos/5f9ffd96a8c2738e398342b7
+Content-Type: application/json
+
+{
+    "name": "yimeng jia"
+} 

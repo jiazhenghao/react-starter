@@ -77,6 +77,7 @@ module.exports = {
       }
     ],
     'no-array-constructor': 'error',
+    'no-console': 0,
     'no-bitwise': 'error',
     'no-caller': 'error',
     'no-debugger': 'error',
@@ -93,7 +94,7 @@ module.exports = {
       1,
       { extensions: ['.js', '.jsx', 'ts', 'tsx'] }
     ],
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': 0,
     'spaced-comment': [
       'error',
       'always',
