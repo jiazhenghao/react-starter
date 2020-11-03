@@ -1,6 +1,7 @@
 import express from 'express'
 import Demo from '@/server/models/demo'
 import { DemoType } from '@/server/routes/type'
+import authenticateToken from '@/server/middlewares/authenticateToken'
 
 const router = express.Router()
 
@@ -21,7 +22,13 @@ router.get('/:id', getDemo, (req, res) => {
 })
 
 // Creating one
-router.post('/', async (req, res) => {
+// eslint-disable-next-line consistent-return
+router.post('/', authenticateToken, async (req, res) => {
+  // Add jwt authentication logic
+  // @ts-ignore
+  if (req.clientUser.name !== req.body.name) {
+    return res.status(201).send('This user do not have the correct token')
+  }
   const demo = new Demo({
     name: req.body.name,
     subscribedToChannel: req.body.subscribedToChannel

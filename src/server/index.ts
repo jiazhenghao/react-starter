@@ -4,7 +4,7 @@ import path from 'path'
 import demoRouter from '@/server/routes/demos'
 import userRouter from '@/server/routes/users'
 import paginationRouter from '@/server/routes/paginations'
-// import jwt from 'jsonwebtoken'
+import loginRouter from '@/server/routes/logins'
 
 const app = express()
 
@@ -26,5 +26,6 @@ app.use('/demos', demoRouter)
 app.use('/users', userRouter)
 app.use('/users/login', userRouter)
 app.use('/paginations', paginationRouter)
+app.use('/login', loginRouter)
 
 app.listen(port, () => console.log(`listening on port ${port}`))

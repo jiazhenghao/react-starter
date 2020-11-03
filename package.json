@@ -11,6 +11,7 @@
     "build": "rm -rf ./dist && NODE_ENV=prod webpack --config webpack.config.prod.js",
     "build:win": "rmdir /S /Q dist && cross-env NODE_ENV=prod webpack --config webpack.config.prod.js",
     "devStart": "cross-env NODE_ENV=serve nodemon -r tsconfig-paths/register ./src/server/index.ts  --project tsconfig.server.json",
+    "devJWTAuth": "cross-env NODE_ENV=serve nodemon -r tsconfig-paths/register ./src/server/authServer.ts  --project tsconfig.server.json",
     "startDevDB": "mongod --config /usr/local/etc/mongod.conf --fork",
     "MockPaginationData": "cross-env NODE_ENV=serve nodemon -r tsconfig-paths/register ./src/server/mock/paginationData.ts  --project tsconfig.server.json"
   },

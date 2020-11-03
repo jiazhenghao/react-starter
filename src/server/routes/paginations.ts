@@ -1,6 +1,6 @@
 import express from 'express'
 import Pagination from '@/server/models/pagination'
-import paginatedResults from '@/server/utils/paginatedResults'
+import paginatedResults from '@/server/middlewares/paginatedResults'
 
 const router = express.Router()
 

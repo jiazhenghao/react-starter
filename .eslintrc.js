@@ -51,6 +51,7 @@ module.exports = {
     'comma-spacing': ['error', { before: false, after: true }],
     complexity: ['error', 20],
     'computed-property-spacing': ['error', 'never'],
+    curly: 0,
     'dot-notation': 'error',
     eqeqeq: ['error', 'always'],
     'func-names': 'off',
@@ -77,6 +78,7 @@ module.exports = {
         properties: false
       }
     ],
+    'nonblock-statement-body-position': 0,
     'no-array-constructor': 'error',
     'no-console': 0,
     'no-bitwise': 'error',
