@@ -12,7 +12,6 @@ require('dotenv').config({
 
 const router = express.Router()
 
-// eslint-disable-next-line consistent-return
 router.post('/', async (req, res) => {
   const user = ((await User.findOne({
     username: req.body.username

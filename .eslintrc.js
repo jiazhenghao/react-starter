@@ -51,6 +51,7 @@ module.exports = {
     'comma-spacing': ['error', { before: false, after: true }],
     complexity: ['error', 20],
     'computed-property-spacing': ['error', 'never'],
+    'consistent-return': 0,
     curly: 0,
     'dot-notation': 'error',
     eqeqeq: ['error', 'always'],

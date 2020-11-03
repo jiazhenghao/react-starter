@@ -29,7 +29,6 @@ router.post('/', async (req, res) => {
   }
 })
 
-// eslint-disable-next-line consistent-return
 router.post('/login', async (req, res) => {
   const user = ((await User.findOne({
     username: req.body.username

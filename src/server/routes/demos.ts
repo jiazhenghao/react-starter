@@ -22,7 +22,6 @@ router.get('/:id', getDemo, (req, res) => {
 })
 
 // Creating one
-// eslint-disable-next-line consistent-return
 router.post('/', authenticateToken, async (req, res) => {
   // Add jwt authentication logic
   // @ts-ignore

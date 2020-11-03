@@ -6,7 +6,6 @@ require('dotenv').config({
   path: path.resolve(process.cwd(), `.env${NODE_ENV ? `.${NODE_ENV}` : ''}`)
 })
 
-// eslint-disable-next-line consistent-return
 export default function authenticateToken(req: any, res: any, next: any) {
   const authHeader = req.headers.authorization
   const token = authHeader && authHeader.split(' ')[1]
@@ -16,7 +15,6 @@ export default function authenticateToken(req: any, res: any, next: any) {
   jwt.verify(
     token,
     process.env.ACCESS_TOKEN_SECRET as string,
-    // eslint-disable-next-line consistent-return
     (err: any, clientUser: any) => {
       // console.log(clientUser)
       if (err)
