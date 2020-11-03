@@ -25,3 +25,31 @@ Content-Type: application/json
 {
     "name": "yimeng jia"
 } 
+
+###
+
+GET http://localhost:8002/users
+
+###
+
+POST http://localhost:8002/users
+Content-Type: application/json
+
+{
+    "username": "zhenghao1",
+    "password": "1234abcd"
+} 
+
+###
+
+POST http://localhost:8002/users/login
+Content-Type: application/json
+
+{
+    "username": "zhenghao1",
+    "password": "1234abcd111"
+} 
+
+###
+
+GET http://localhost:8002/paginations?page=2&limit=3

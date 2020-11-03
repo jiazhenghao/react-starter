@@ -1,6 +1,6 @@
 import express from 'express'
 import Demo from '@/server/models/demo'
-import { demoType } from '@/server/routes/type'
+import { DemoType } from '@/server/routes/type'
 
 const router = express.Router()
 
@@ -21,7 +21,6 @@ router.get('/:id', getDemo, (req, res) => {
 })
 
 // Creating one
-// eslint-disable-next-line space-before-function-paren
 router.post('/', async (req, res) => {
   const demo = new Demo({
     name: req.body.name,
@@ -36,7 +35,6 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-// eslint-disable-next-line space-before-function-paren
 router.patch('/:id', getDemo, async (req, res) => {
   // eslint-disable-next-line eqeqeq
   if (req.body.name != null) {
@@ -73,9 +71,9 @@ router.delete('/:id', getDemo, async (req, res) => {
 
 // eslint-disable-next-line consistent-return
 async function getDemo(req: any, res: any, next: any) {
-  let demo: demoType
+  let demo: DemoType
   try {
-    demo = ((await Demo.findById(req.params.id)) as unknown) as demoType
+    demo = ((await Demo.findById(req.params.id)) as unknown) as DemoType
     if (demo === null) {
       return res.status(404).json({ message: 'Cannot find a demo data' })
     }

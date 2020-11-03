@@ -2,6 +2,9 @@ import express from 'express'
 import mongoose from 'mongoose'
 import path from 'path'
 import demoRouter from '@/server/routes/demos'
+import userRouter from '@/server/routes/users'
+import paginationRouter from '@/server/routes/paginations'
+// import jwt from 'jsonwebtoken'
 
 const app = express()
 
@@ -20,5 +23,8 @@ db.once('open', () => console.log('Connected to Databse'))
 app.use(express.json())
 
 app.use('/demos', demoRouter)
+app.use('/users', userRouter)
+app.use('/users/login', userRouter)
+app.use('/paginations', paginationRouter)
 
 app.listen(port, () => console.log(`listening on port ${port}`))
