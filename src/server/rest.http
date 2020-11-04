@@ -101,3 +101,43 @@ Content-Type: application/json
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiemhlbmdoYW8gamlhIDMiLCJpYXQiOjE2MDQ0MDE2NjN9.Y1zrzRp6luz4RDuEC4NSrbBVoCpZKfVksdTmk59oO6A"
 }
+
+###
+get http://localhost:8002/dashboard
+Content-Type: application/json
+
+{
+    "userId": 1
+}
+
+###
+get http://localhost:8002/admin
+Content-Type: application/json
+
+{
+    "userId": 2
+}
+
+###
+get http://localhost:8002/projects/2
+Content-Type: application/json
+
+{
+    "userId": 1
+}
+
+###
+get http://localhost:8002/projects
+Content-Type: application/json
+
+{
+    "userId": 4
+}
+
+###
+delete http://localhost:8002/projects/2
+Content-Type: application/json
+
+{
+    "userId": 2
+}

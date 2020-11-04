@@ -5,6 +5,13 @@ import demoRouter from '@/server/routes/demos'
 import userRouter from '@/server/routes/users'
 import paginationRouter from '@/server/routes/paginations'
 import loginRouter from '@/server/routes/logins'
+import projectRouter from '@/server/routes/projects'
+import setUser from '@/server/middlewares/authentications/setUser'
+import {
+  authUser,
+  authRole
+} from '@/server/middlewares/authentications/basicAuth'
+import data from '@/server/mock/data'
 
 const app = express()
 
@@ -27,5 +34,17 @@ app.use('/users', userRouter)
 app.use('/users/login', userRouter)
 app.use('/paginations', paginationRouter)
 app.use('/login', loginRouter)
+
+// auth demos
+app.use(setUser)
+app.use('/projects', projectRouter)
+app.get('/dashboard', authUser, (req, res) => {
+  res.send('Dashboard Page')
+})
+
+const { ROLE } = data
+app.get('/admin', authUser, authRole(ROLE.ADMIN), (req, res) => {
+  res.send('Admin Page')
+})
 
 app.listen(port, () => console.log(`listening on port ${port}`))
