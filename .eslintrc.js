@@ -54,6 +54,7 @@ module.exports = {
     eqeqeq: ['error', 'always'],
     'func-names': 'off',
     indent: ['error', 2, { SwitchCase: 1 }],
+    'import/no-extraneous-dependencies': 0,
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
@@ -89,6 +90,8 @@ module.exports = {
     'prefer-template': 0,
     'no-use-before-define': 0,
     'prefer-const': 'error',
+    'react/prop-types': 0,
+    'react/button-has-type': 0,
     'react/jsx-filename-extension': [
       1,
       { extensions: ['.js', '.jsx', 'ts', 'tsx'] }

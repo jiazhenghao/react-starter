@@ -4,7 +4,9 @@ module.exports = {
   preset: 'ts-jest',
   rootDir: '.',
   roots: ['<rootDir>/src/', '<rootDir>/tests/'],
-  transform: { '\\.ts$': ['ts-jest'] },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest'
+  },
   transformIgnorePatterns: ['/node_modules/'],
   testEnvironment: 'node',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
@@ -17,7 +19,7 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsConfig: {
+      tsconfig: {
         allowJs: true // allow js in typescript
       }
     }
