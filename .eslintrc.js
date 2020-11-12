@@ -59,6 +59,7 @@ module.exports = {
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
     // 'linebreak-style': ['error', 'unix'],
+
     'linebreak-style': 0,
     'max-depth': ['error', 5],
     'max-len': [
@@ -85,6 +86,7 @@ module.exports = {
     'no-shadow': 'error',
     'no-undef': 'error',
     'no-var': 'error',
+    'object-curly-newline': 0,
     'prefer-arrow-callback': 'error',
     'arrow-parens': 0,
     'prefer-template': 0,
@@ -96,7 +98,7 @@ module.exports = {
       1,
       { extensions: ['.js', '.jsx', 'ts', 'tsx'] }
     ],
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': 0,
     'spaced-comment': [
       'error',
       'always',
