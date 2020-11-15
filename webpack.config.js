@@ -5,23 +5,10 @@ const Dotenv = require('dotenv-webpack')
 module.exports = {
   devtool: 'source-map',
   resolve: {
-    extensions: [
-      '.tsx',
-      '.ts',
-      '.js',
-      'jsx',
-      '.json',
-      '.css',
-      '.csv',
-      '.jpg',
-      '.png',
-      '.jpeg',
-      'bmp',
-      'gif',
-      'svg'
-    ],
+    extensions: ['.tsx', '.ts', '.js', 'jsx', '.json', '.css', '.csv', '.jpg', '.png', '.jpeg', 'bmp', 'gif', 'svg'],
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(__dirname, './src'),
+      '@/tests': path.resolve(__dirname, './tests')
     }
   },
   module: {
