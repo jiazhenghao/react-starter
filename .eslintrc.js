@@ -92,10 +92,8 @@ module.exports = {
     'prefer-const': 'error',
     'react/prop-types': 0,
     'react/button-has-type': 0,
-    'react/jsx-filename-extension': [
-      1,
-      { extensions: ['.js', '.jsx', 'ts', 'tsx'] }
-    ],
+    'react/jsx-one-expression-per-line': 0,
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
     'space-before-function-paren': 0,
     'spaced-comment': [
       'error',

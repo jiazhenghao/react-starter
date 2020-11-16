@@ -11,17 +11,13 @@ type DataType = {
 
 const Fetch: React.FC<FetchProps> = ({ url }) => {
   const [data, setData] = useState<DataType | null>(null)
-  let mounted = false
 
   const loadData = useCallback(async () => {
-    if (mounted) {
-      const response = await axios.get(url)
-      setData(response.data)
-    }
+    const response = await axios.get(url)
+    setData(response.data)
   }, [])
 
   useEffect(() => {
-    mounted = true
     loadData()
   }, [url])
 

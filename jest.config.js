@@ -7,6 +7,7 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
+  setupFiles: ['<rootDir>/src/setupTests.ts'],
   transformIgnorePatterns: ['/node_modules/'],
   testEnvironment: 'node',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
