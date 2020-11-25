@@ -58,7 +58,6 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
-    // 'linebreak-style': ['error', 'unix'],
     'linebreak-style': 0,
     'max-depth': ['error', 5],
     'max-len': [
@@ -85,6 +84,7 @@ module.exports = {
     'no-shadow': 'error',
     'no-undef': 'error',
     'no-var': 'error',
+    'object-curly-newline': 0,
     'prefer-arrow-callback': 'error',
     'arrow-parens': 0,
     'prefer-template': 0,
@@ -92,11 +92,9 @@ module.exports = {
     'prefer-const': 'error',
     'react/prop-types': 0,
     'react/button-has-type': 0,
-    'react/jsx-filename-extension': [
-      1,
-      { extensions: ['.js', '.jsx', 'ts', 'tsx'] }
-    ],
-    'space-before-function-paren': ['error', 'never'],
+    'react/jsx-one-expression-per-line': 0,
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
+    'space-before-function-paren': 0,
     'spaced-comment': [
       'error',
       'always',
