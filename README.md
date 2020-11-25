@@ -1,13 +1,12 @@
 # A react starter kit to replace CRA
 
-## React, React-router, Typescript, Eslint, Webpack, Jest, in the master branch but no babel
+## Main library includes:
 
-# About testing, we use
+> React, Typescript, Eslint, Webpack, Jest
 
-## React-testing-library @testing-library/react
+## About testing, we use
 
-## jsdom @testing-library/jest-dom
-
-## jest
-
-## react-test-render (snapshot)
+1. Jest
+2. jsdom @testing-library/jest-dom
+3. react-testing-library @testing-library/react (unit testing)
+4. react-test-render (for snapshot)
