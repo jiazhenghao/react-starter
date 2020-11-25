@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 import 'whatwg-fetch'
-import { convert } from '@/utils/convert'
-import { rest, server } from '@/testServer'
+import { convert } from '@/client/utils/convert'
+import { rest, server } from '@/client/testServer'
 
 test('converts correctly', async () => {
   const rate = await convert('USD', 'CAD')

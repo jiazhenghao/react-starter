@@ -8,7 +8,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', 'jsx', '.json', '.css', '.csv', '.jpg', '.png', '.jpeg', 'bmp', 'gif', 'svg'],
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@/tests': path.resolve(__dirname, './tests')
+      '@tests': path.resolve(__dirname, './tests')
     }
   },
   module: {

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import React from 'react'
-import Clicker from '@/components/Clicker'
+import Clicker from '@/client/components/Clicker'
 import '@testing-library/jest-dom'
 import { render, cleanup, fireEvent, waitFor } from '@testing-library/react'
 

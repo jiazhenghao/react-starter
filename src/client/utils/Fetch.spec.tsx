@@ -10,9 +10,8 @@ import { render, cleanup, waitForElementToBeRemoved } from '@testing-library/rea
 import '@testing-library/jest-dom/extend-expect'
 
 // the component to test
-import Fetch from '@/utils/Fetch'
+import Fetch from '@/client/utils/Fetch'
 
-// eslint-disable-next-line import/no-unresolved
 import axios from '@tests/__mocks__/axios'
 
 afterEach(() => {

@@ -1,8 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react'
 import { connect } from 'react-redux'
-import { increment, decrement } from '@/redux/actions'
-import { InitialState } from '@/redux/reducers'
+import { increment, decrement } from '@/client/redux/actions'
+import { InitialState } from '@/client/redux/reducers'
 
 interface CounterProps {
   increment: Function

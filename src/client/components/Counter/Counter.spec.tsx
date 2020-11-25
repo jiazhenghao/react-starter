@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import { Provider } from 'react-redux'
-import configureStore from '@/redux'
+import configureStore from '@/client/redux'
 
 // import react-testing methods
 import { render, cleanup, fireEvent } from '@testing-library/react'
@@ -12,7 +12,7 @@ import { render, cleanup, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
 // the component to test
-import Counter from '@/components/Counter'
+import Counter from '@/client/components/Counter'
 
 afterEach(cleanup)
 

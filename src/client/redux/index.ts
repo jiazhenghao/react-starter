@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import rootReducer, { InitialState } from '@/redux/reducers'
+import rootReducer, { InitialState } from '@/client/redux/reducers'
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant'
 import { createBrowserHistory } from 'history'
 

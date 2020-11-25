@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Button from '@/components/Button/'
+import Button from '@/client/components/Button/'
 import '@testing-library/jest-dom'
 import { render, cleanup } from '@testing-library/react'
 import renderer from 'react-test-renderer'

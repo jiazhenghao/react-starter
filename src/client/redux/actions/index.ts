@@ -1,4 +1,4 @@
-import * as types from '@/redux/types'
+import * as types from '@/client/redux/types'
 
 export function increment() {
   return { type: types.INCREMENT }

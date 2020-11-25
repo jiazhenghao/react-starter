@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '@/components/Button'
-import { convert } from '@/utils/convert'
+import Button from '@/client/components/Button'
+import { convert } from '@/client/utils/convert'
 import useSWR from 'swr'
 
 export default function App() {
