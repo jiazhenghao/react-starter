@@ -1,0 +1,143 @@
+GET http://localhost:8002/demos
+
+###
+
+GET http://localhost:8002/demos/5f9ffd73a8c2738e398342b6
+
+###
+
+POST http://localhost:8002/demos
+Content-Type: application/json
+
+{
+    "name": "zhenghao jia2",
+    "subscribedToChannel": "demo channel 2"
+} 
+
+###
+DELETE http://localhost:8002/demos/5f9ffce82963ee8dc7985b17
+
+###
+
+PATCH http://localhost:8002/demos/5f9ffd96a8c2738e398342b7
+Content-Type: application/json
+
+{
+    "name": "yimeng jia"
+} 
+
+###
+
+GET http://localhost:8002/users
+
+###
+
+POST http://localhost:8002/users
+Content-Type: application/json
+
+{
+    "username": "zhenghao1",
+    "password": "1234abcd"
+} 
+
+###
+
+POST http://localhost:8002/users/login
+Content-Type: application/json
+
+{
+    "username": "zhenghao1",
+    "password": "1234abcd111"
+} 
+
+###
+
+GET http://localhost:8002/paginations?page=2&limit=3
+
+###
+
+POST http://localhost:8002/login
+Content-Type: application/json
+
+{
+    "username": "zhenghao jia 2",
+    "password": "1234abcd"
+} 
+
+###
+
+POST http://localhost:8002/demos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiemhlbmdoYW8gamlhIDIiLCJpYXQiOjE2MDQzOTM0MjN9.6ZlULGskV3ichcvFD9yhTmGM_yKytzMTsQS1ajA8-N8
+Content-Type: application/json
+
+{
+    "name": "zhenghao jia 22",
+    "subscribedToChannel": "demo channel 7"
+} 
+
+###
+
+POST http://localhost:4000/login 
+Content-Type: application/json
+
+{
+    "username": "zhenghao jia 3",
+    "password": "1234abcd3"
+}
+
+###
+POST http://localhost:4000/token 
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiemhlbmdoYW8gamlhIDMiLCJpYXQiOjE2MDQ0MDE2ODIsImV4cCI6MTYwNDQwMTcyMn0.LpI0lXGTjG9mkgpOBO2J7uKJz2lxkkNINSDOqaIPOAc"
+}
+
+###
+
+DELETE http://localhost:4000/logout 
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiemhlbmdoYW8gamlhIDMiLCJpYXQiOjE2MDQ0MDE2NjN9.Y1zrzRp6luz4RDuEC4NSrbBVoCpZKfVksdTmk59oO6A"
+}
+
+###
+get http://localhost:8002/dashboard
+Content-Type: application/json
+
+{
+    "userId": 1
+}
+
+###
+get http://localhost:8002/admin
+Content-Type: application/json
+
+{
+    "userId": 2
+}
+
+###
+get http://localhost:8002/projects/2
+Content-Type: application/json
+
+{
+    "userId": 1
+}
+
+###
+get http://localhost:8002/projects
+Content-Type: application/json
+
+{
+    "userId": 4
+}
+
+###
+delete http://localhost:8002/projects/2
+Content-Type: application/json
+
+{
+    "userId": 2
+}

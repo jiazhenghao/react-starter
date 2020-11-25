@@ -1,4 +1,4 @@
-import { isInternalLink } from '@/utils/main'
+import { isInternalLink } from '@/client/utils/main'
 
 test('should return false given external link', () => {
   expect(isInternalLink('https://google.com')).toBe(false)

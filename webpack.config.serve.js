@@ -15,7 +15,7 @@ module.exports = {
   watch: true,
   entry: {
     hot: 'webpack/hot/dev-server',
-    checkin: path.join(__dirname, '/src/index.tsx')
+    checkin: path.join(__dirname, '/src/client/index.tsx')
   },
   output: {
     path: path.join(__dirname, '/dist'),
