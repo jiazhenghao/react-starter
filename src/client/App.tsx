@@ -1,5 +1,21 @@
 import React from 'react'
+import Button from '@/components/Button'
+import { convert } from '@/utils/convert'
+import useSWR from 'swr'
 
 export default function App() {
-  return <div>Hello World</div>
+  const [base, dest] = ['USD', 'CAD']
+  const { data: rate, error } = useSWR([base, dest], convert)
+
+  if (error) return <span>Error!</span>
+  if (!rate) return <span>Loading!</span>
+
+  return (
+    <div>
+      <div>
+        {base} to {dest} = {rate}
+      </div>
+      <Button label="click me please" />
+    </div>
+  )
 }

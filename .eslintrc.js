@@ -24,9 +24,6 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'jest'],
   rules: {
-    semi: 0,
-    'import/prefer-default-export': 'off',
-    'comma-dangle': ['error', 'never'],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/member-delimiter-style': [
@@ -45,16 +42,22 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'array-bracket-spacing': ['error', 'never'],
     'arrow-body-style': ['off', 'as-needed'],
+    'arrow-parens': 0,
     'block-spacing': 'error',
     'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+    'comma-dangle': ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
     complexity: ['error', 20],
     'computed-property-spacing': ['error', 'never'],
+    'consistent-return': 0,
+    curly: 0,
     'dot-notation': 'error',
     eqeqeq: ['error', 'always'],
     'func-names': 'off',
     indent: ['error', 2, { SwitchCase: 1 }],
     'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 'off',
+    'import/newline-after-import': 0,
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
@@ -83,13 +86,15 @@ module.exports = {
     'no-inline-comments': 'off',
     'no-shadow': 'error',
     'no-undef': 'error',
+    'no-use-before-define': 0,
+    'no-console': 0,
     'no-var': 'error',
+    'nonblock-statement-body-position': 0,
     'object-curly-newline': 0,
     'prefer-arrow-callback': 'error',
-    'arrow-parens': 0,
     'prefer-template': 0,
-    'no-use-before-define': 0,
     'prefer-const': 'error',
+    radix: 0,
     'react/prop-types': 0,
     'react/button-has-type': 0,
     'react/jsx-one-expression-per-line': 0,
@@ -104,6 +109,7 @@ module.exports = {
           exceptions: ['=']
         }
       }
-    ]
+    ],
+    semi: 0
   }
 }
