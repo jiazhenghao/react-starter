@@ -4,7 +4,7 @@
   "description": "A starter kit for those who are tired of CRA, and do not like Gatsby or Next",
   "main": "index.js",
   "scripts": {
-    "serve": "NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js",
+    "serve": "NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js --project tsconfig.client.json",
     "serve:win": "cross-env NODE_ENV=serve webpack-dev-server --open --colors --config webpack.config.serve.js",
     "test": "jest --coverage --watchAll --config=jest.config.js",
     "lint": "cross-env NODE_ENV=serve eslint . --ext .ts",
@@ -19,6 +19,15 @@
   "author": "jiazhenghao <jiazhenghao0203@hotmail.com> (https://github.com/jiazhenghao)",
   "license": "ISC",
   "devDependencies": {
+    "@ef-carbon/tspm": "2.2.5",
+    "@types/bcrypt": "3.0.0",
+    "@types/express": "4.17.8",
+    "@types/jsonwebtoken": "8.5.0",
+    "@types/mongoose": "5.7.37",
+    "@types/node": "14.14.6",
+    "nodemon": "1.19.0",
+    "ts-node": "8.10.2",
+    "tsconfig-paths": "3.9.0",
     "@testing-library/jest-dom": "5.11.5",
     "@testing-library/react": "11.1.0",
     "@types/history": "4.7.8",
@@ -67,6 +76,11 @@
     "whatwg-fetch": "3.5.0"
   },
   "dependencies": {
+    "bcrypt": "5.0.0",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "5.5.7",
     "axios": "0.21.0",
     "history": "5.0.0",
     "react": "17.0.1",
